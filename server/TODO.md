@@ -2,26 +2,25 @@
 
 ## Tasks
 
-- [ ] Create Initial structure
+- [x] Create Initial structure
 
-  - [ ] Install initial dependencies
-  - [ ] Test initial dev and prod scripts
+  - [x] Install initial dependencies
+  - [x] Test initial dev and prod scripts
 
-- [ ] Initialize server
+- [x] Initialize server
 
-  - [ ] Implement node/express server
-  - [ ] inplement graphql server
+  - [x] Implement node/express server
+  - [x] inplement graphql server
+  - [x] Verify graphwl server with dummy resolver
 
-- [ ] Database
+- [] Database
 
-  - [ ] Create dev/local database
-  - [ ] Connect to local database
+  - [x] Create dev/local database use docker
+  - [x] Connect to local database
 
 - [ ] Auth User
 
   - [ ] Create entities/dto for user
   - [ ] User registration
   - [ ] User Login
-
-- [ ] Task title ~3d #type @name yyyy-mm-dd
-  - [ ] Sub-task or description
+  - [ ] Add user to context through middleware
