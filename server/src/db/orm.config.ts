@@ -1,4 +1,4 @@
-import path from "path";
+import { entities } from "../common/entities";
 import { ConnectionOptions } from "typeorm";
 import * as _env from "../config";
 
@@ -9,9 +9,9 @@ const ormconfig: ConnectionOptions = {
   username: _env.DB_USERNAME,
   password: _env.DB_PASSWORD,
   database: _env.DB_NAME,
-  synchronize: false,
+  synchronize: true,
   logging: true,
-  entities: [],
+  entities: [...entities],
 };
 
 export default ormconfig;

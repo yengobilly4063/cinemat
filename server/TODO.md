@@ -18,9 +18,9 @@
   - [x] Create dev/local database use docker
   - [x] Connect to local database
 
-- [ ] Auth User
+- [x] Auth User
 
-  - [ ] Create entities/dto for user
-  - [ ] User registration
-  - [ ] User Login
-  - [ ] Add user to context through middleware
+  - [x] Create entities/dto for user
+  - [x] User registration
+  - [x] User Login
+  - [x] Add user to context through middleware

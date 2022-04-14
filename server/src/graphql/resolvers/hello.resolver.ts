@@ -1,6 +1,6 @@
 import { Query, Resolver } from "type-graphql";
 
-@Resolver(() => String || null)
+@Resolver(() => String)
 class HelloResolver {
   @Query(() => String)
   async hello(): Promise<String> {
