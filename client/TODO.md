@@ -2,14 +2,16 @@
 
 ## Tasks
 
-- [ ] Create Initial app
+- [x] Create Initial app
 
-  - [ ] Install initial dependencies
-  - [ ] Test initial dev and prod scripts
+  - [x] Install initial dependencies
+  - [x] Test initial dev and prod scripts
 
-- [ ] Analyse initial Layout
+- [x] Analyse initial Layout
 
-- [ ] Auth
-  - [ ] Setup apollo client
-  - [ ] Registration
-  - [ ] Login
+- [x] Auth
+  - [x] Setup apollo client
+  - [x] Create auth context
+  - [x] Registration
+  - [x] Login
+  - [x] Protected routing

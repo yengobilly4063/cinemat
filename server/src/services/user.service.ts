@@ -28,7 +28,7 @@ export class UserService {
     if (!user) throw new ApolloError(errorMessage);
 
     const isValidPassword: boolean = await comparePassword(password, user.password);
-    if (!isValidPassword) throw new ApolloError(errorMessage);
+    if (!isValidPassword) throw new Error(errorMessage);
 
     const token = generateToken(user);
     return token;

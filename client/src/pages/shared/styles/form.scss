@@ -1,0 +1,47 @@
+.centre-wrapper {
+  min-height: calc(100vh - 3rem);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.form {
+  min-width: 30rem;
+  max-width: 40rem;
+  height: fit-content;
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  h1 {
+    text-align: center;
+  }
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+.form-control {
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
+  border-radius: 0.2rem;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+}
+
+.form-action {
+  text-align: center;
+}
+
+.form-error {
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+  text-align: right;
+  color: brown;
+  display: block;
+}
+.login-register {
+  text-align: center;
+  span {
+    margin-right: 0.5rem;
+  }
+}

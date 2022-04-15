@@ -12,6 +12,32 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+ul {
+  list-style: none;
+  li {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+}
+button,
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: blue;
+  background-color: transparent;
+  border: 1px solid rgba($color: blue, $alpha: 0.6);
+
+  transition: all 250ms ease-in-out;
+  &:hover {
+    border: 1px solid transparent;
+    background-color: blue;
+    color: white;
+  }
+}
+
 a {
   text-decoration: none;
 }
