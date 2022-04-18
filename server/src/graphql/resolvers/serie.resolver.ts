@@ -1,5 +1,5 @@
 import { SerieService } from "../../services";
-import { Arg, Authorized, Ctx, Mutation, Resolver } from "type-graphql";
+import { Arg, Authorized, Ctx, Mutation, Query, Resolver } from "type-graphql";
 import { Service } from "typedi";
 import { Serie } from "../..//common/entities";
 import { SerieInput } from "../types/serie";
@@ -22,5 +22,14 @@ export class SerieResolver {
   @Authorized()
   async deleteSerie(@Arg("id") id: string): Promise<boolean> {
     return this.serieService.deleteSerie(id);
+  }
+
+  @Query(() => [Serie])
+  @Authorized()
+  async getSeries(@Ctx() context: Context): Promise<Serie[]> {
+    const {
+      user: { id },
+    } = context;
+    return this.serieService.getSeries(id);
   }
 }

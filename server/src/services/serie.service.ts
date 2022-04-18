@@ -19,6 +19,10 @@ export class SerieService {
     return await this.serieRepository.save({ ...serieInput });
   }
 
+  async getSeries(userId: string): Promise<Serie[]> {
+    return this.serieRepository.find({ userId });
+  }
+
   async deleteSerie(id: string): Promise<boolean> {
     const result = await this.serieRepository.delete({ id });
     return result.affected > 0;
