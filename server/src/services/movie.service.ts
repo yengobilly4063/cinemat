@@ -20,24 +20,13 @@ export class MovieService {
     return await this.movieRepository.save({ ...movieInput }, { reload: true });
   }
 
-  async editMovie(input: MovieInput): Promise<Movie> {
-    const errorMessage = "Movie not found";
-    const { id } = input;
-
-    const foundMovie = await this.findMovieById(id, this.movieRepository);
-    if (!foundMovie) throw new ApolloError(errorMessage);
-    await this.movieRepository.update({ id }, input);
-
-    return this.movieRepository.findOne({ id });
+  async getMovies(userId: string): Promise<Movie[]> {
+    return this.movieRepository.find({ userId });
   }
 
   async deleteMovie(id: string): Promise<boolean> {
     const result = await this.movieRepository.delete({ id });
     return result.affected > 0;
-  }
-
-  private async findMovieById(id: string, repository: Repository<Movie>): Promise<Movie> {
-    return await repository.findOne({ id });
   }
 
   private async findMovieByTitle(title: string, repository: Repository<Movie>): Promise<Movie> {

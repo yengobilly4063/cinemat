@@ -1,6 +1,6 @@
 import { Movie } from "../../common/entities";
 import { MovieService } from "../../services";
-import { Arg, Authorized, Ctx, Mutation, Resolver } from "type-graphql";
+import { Arg, Authorized, Ctx, Mutation, Query, Resolver } from "type-graphql";
 import { Service } from "typedi";
 import { MovieInput } from "../types/movie";
 import Context from "../../common/types/context";
@@ -17,10 +17,13 @@ export class MovieResolver {
     return this.movieService.addMovie(input, user);
   }
 
-  @Mutation(() => Movie)
+  @Query(() => [Movie])
   @Authorized()
-  async editMovie(@Arg("input") input: MovieInput): Promise<Movie> {
-    return this.movieService.editMovie(input);
+  async getMovies(@Ctx() context: Context): Promise<Movie[]> {
+    const {
+      user: { id },
+    } = context;
+    return this.movieService.getMovies(id);
   }
 
   @Mutation(() => Boolean)
