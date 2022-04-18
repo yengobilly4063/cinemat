@@ -26,8 +26,4 @@ export class SeasonService {
   async findSeasonsBySerieId(serieId: string): Promise<Season[]> {
     return await this.seasonRepository.find({ serieId });
   }
-
-  private async findSeasonByTitle(title: string): Promise<Season> {
-    return await this.seasonRepository.findOne({ title });
-  }
 }
