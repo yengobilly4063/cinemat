@@ -2,7 +2,7 @@ import { User } from "../../common/entities";
 import { Arg, Authorized, Ctx, Mutation, Query, Resolver } from "type-graphql";
 import { Service } from "typedi";
 import { UserService } from "../../services";
-import { CreateUserInput, LoginUserInput } from "../../graphql/types/user.types";
+import { CreateUserInput, LoginUserInput } from "../types/user";
 import Context from "../../common/types/context";
 
 @Service()

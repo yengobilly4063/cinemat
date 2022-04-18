@@ -24,3 +24,7 @@
   - [x] User registration
   - [x] User Login
   - [x] Add user to context through middleware
+
+- [x] Movie
+  - [x] Add Movie
+  - [x] Edit/Delete movie

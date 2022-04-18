@@ -1,5 +1,6 @@
+import { Movie } from "./movie.entity";
 import { User } from "./user.entity";
 
-const entities = [User];
+const entities = [User, Movie];
 
-export { User, entities };
+export { User, Movie, entities };
