@@ -11,8 +11,8 @@ export class SerieService {
   async addSerie(input: SerieInput, user: User): Promise<Serie> {
     const errorMessage = "Serie with title already exists";
     const { title } = input;
-    const seasonFound = await this.findSerieByTitle(title);
-    if (seasonFound) {
+    const serieFound = await this.findSerieByTitle(title);
+    if (serieFound) {
       throw new ApolloError(errorMessage);
     }
     const serieInput: Serie = { ...input, userId: user.id };

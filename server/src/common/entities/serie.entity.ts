@@ -26,6 +26,6 @@ export class Serie {
   @Field(() => String, { nullable: true })
   year?: string;
 
-  @Field(() => Season)
+  @Field(() => [Season])
   seasons?: Season[];
 }
