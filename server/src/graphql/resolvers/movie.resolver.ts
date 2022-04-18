@@ -6,7 +6,7 @@ import { MovieInput } from "../types/movie";
 import Context from "../../common/types/context";
 
 @Service()
-@Resolver()
+@Resolver(() => Movie)
 export class MovieResolver {
   constructor(private readonly movieService: MovieService) {}
 
