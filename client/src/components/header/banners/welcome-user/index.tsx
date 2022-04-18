@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useAuthContext } from "../../../../shared/hooks/useAuthContext";
 import styles from "./welcome-user.module.scss";
 const WelcomeUser = () => {
@@ -10,6 +11,11 @@ const WelcomeUser = () => {
           <span className={styles.logout} onClick={logout}>
             Signout
           </span>
+        </li>
+        <li>
+          <Link to="/add" className="button">
+            Add Movie/Series
+          </Link>
         </li>
       </ul>
     );

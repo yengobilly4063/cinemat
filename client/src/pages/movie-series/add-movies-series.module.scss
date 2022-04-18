@@ -1,0 +1,23 @@
+.wrapper {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid rgba($color: blue, $alpha: 0.1);
+}
+
+.search {
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  max-height: 2.5rem;
+  height: 100%;
+  gap: 0.2rem;
+}
+
+.addSection {
+  margin: 2rem 0 0 0;
+  display: flex;
+  justify-content: center;
+}

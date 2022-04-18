@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../shared/styles/form.scss";
+import "../../shared/styles/form.scss";
 import useRegisterUser from "../shared/hooks/useRegisterLoginUser";
 
 const RegisterUser = () => {

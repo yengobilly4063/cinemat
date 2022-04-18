@@ -10,8 +10,13 @@
 - [x] Analyse initial Layout
 
 - [x] Auth
+
   - [x] Setup apollo client
   - [x] Create auth context
   - [x] Registration
   - [x] Login
   - [x] Protected routing
+
+- [ ] Movie
+  - [ ] Add Movie
+  - [ ] Edit/Remove movie

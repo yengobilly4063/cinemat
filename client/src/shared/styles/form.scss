@@ -29,7 +29,10 @@
 }
 
 .form-action {
-  text-align: center;
+  text-align: right;
+  * {
+    margin-left: 1rem;
+  }
 }
 
 .form-error {
