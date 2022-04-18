@@ -1,30 +1,22 @@
 import styles from "./add-movies-series.module.scss";
 import "../../shared/styles/form.scss";
-import AddMovie from "./add-movie";
-import useForm from "../shared/hooks/useForm";
+import AddSerie from "./form";
+import useAddMovieSerieForm from "./hooks/useAddMovieSerieForm";
+import AddMovieSeries from "./form";
 const AddMoviesSeries = () => {
-  const { addType, switchAddType } = useForm();
-
-  const getSwitchText = () => {
-    console.log(addType);
-    switch (addType) {
-      case "movie":
-        return "Add Serie";
-      default:
-        return "Add Movie";
-    }
-  };
-
+  const { switchAddType, addType } = useAddMovieSerieForm();
   return (
     <div className={styles.wrapper}>
       <button className="form-wrapper" onClick={switchAddType}>
-        {getSwitchText()}
+        {addType === "movie" ? "Add Serie" : "Add Movie"}
       </button>
       <div className={styles.search}>
         <input type="text" name="title" />
         <button>Search</button>
       </div>
-      <div className={styles.addSection}>{addType === "movie" && <AddMovie />}</div>
+      <div className={styles.addSection}>
+        <AddMovieSeries addType={addType} />
+      </div>
     </div>
   );
 };
